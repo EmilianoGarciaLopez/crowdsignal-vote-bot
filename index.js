@@ -1,13 +1,12 @@
 import puppeteer from "puppeteer";
 
 const browser = await puppeteer.launch({
-  headless: true, // set to false to see browser and test if scipt works
-  args: ['--proxy-server=socks5://127.0.0.1:9050']
+  headless: false, // set to false to see browser and test if scipt works
+  args: ["--proxy-server=socks5://127.0.0.1:9050"],
 });
 
-
 async function runVotes() {
-  for (let i = 0; i < 18; i++) {
+  for (let i = 0; i < 200; i++) {
     const page = await browser.newPage();
     await page.goto("https://poll.fm/10988464/");
     await page.evaluate(() => {
@@ -31,7 +30,9 @@ function sleep(seconds) {
 while (true) {
   console.log("Voting batch running");
   await runVotes();
-  let sleepNum = Math.floor(Math.random() * (20) + Math.ceil(10));
+  let sleepNum = Math.floor(Math.random() * 20 + 10);
   console.log("Sleeping for " + sleepNum + " seconds");
   sleep(sleepNum);
 }
+
+//2154
