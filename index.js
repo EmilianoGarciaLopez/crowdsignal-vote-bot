@@ -31,7 +31,7 @@ function sleep(seconds) {
 while (true) {
   console.log("Voting batch running");
   await runVotes();
-  let sleepNum = Math.floor(Math.random() * (Math.ceil(20) - Math.ceil(5)) + Math.ceil(5));
+  let sleepNum = Math.floor(Math.random() * (20) + Math.ceil(10));
   console.log("Sleeping for " + sleepNum + " seconds");
   sleep(sleepNum);
 }
