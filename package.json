@@ -1,0 +1,15 @@
+{
+  "name": "votescams",
+  "version": "0.0.1",
+  "description": "A simple way to rig votes on polls.fm",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "scam": "node index.js"
+  },
+  "author": "Emiliano",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^13.0.0"
+  }
+}
