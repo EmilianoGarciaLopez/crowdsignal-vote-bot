@@ -7,7 +7,7 @@ const browser = await puppeteer.launch({
 
 
 async function runVotes() {
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 18; i++) {
     const page = await browser.newPage();
     await page.goto("https://poll.fm/10988464/");
     await page.evaluate(() => {
@@ -29,6 +29,9 @@ function sleep(seconds) {
 }
 
 while (true) {
+  console.log("Voting batch running");
   await runVotes();
-  sleep(120);
+  let sleepNum = Math.floor(Math.random() * (Math.ceil(20) - Math.ceil(5)) + Math.ceil(5));
+  console.log("Sleeping for " + sleepNum + " seconds");
+  sleep(sleepNum);
 }
