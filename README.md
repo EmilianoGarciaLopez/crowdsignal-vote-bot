@@ -20,7 +20,7 @@ if it is, then you can clone the repo and run the script using the commands belo
 git clone https://github.com/EmilianoGarciaLopez/voteScams.git
 cd voteScams
 npm install
-npm run scam
+npm start
 ```
 
 note: this package fails to work after voting 20 times, but an integration with proxies is planned.
