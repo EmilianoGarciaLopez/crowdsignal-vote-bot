@@ -1,7 +1,7 @@
 import puppeteer from "puppeteer";
 
 const browser = await puppeteer.launch({
-  headless: true,
+  headless: true, // set to false to see browser and test if scipt works
   args: ['--proxy-server=socks5://127.0.0.1:9050']
 });
 
