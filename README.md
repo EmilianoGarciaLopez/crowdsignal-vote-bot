@@ -23,4 +23,4 @@ npm install
 npm start
 ```
 
-note: this package fails to work after voting 20 times, but an integration with proxies is planned.
+**Make sure to replace the ANSWER_CHOICE and VOTE_ID variables with the appropriate values**
