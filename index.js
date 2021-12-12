@@ -6,7 +6,7 @@ const browser = await puppeteer.launch({
 });
 
 async function runVotes() {
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < 25; i++) {
     const page = await browser.newPage();
     await page.goto(`https://poll.fm/POLL_ID/`);
     await page.evaluate(() => {
