@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer";
 
-const POLL_ID = 10988464; // CHANGE THIS TO YOUR POLL ID
+const POLL_ID = 99999999; // CHANGE THIS TO YOUR POLL ID
 
 const browser = await puppeteer.launch({
   headless: false, // set to false to see browser and test if scipt works
@@ -13,7 +13,7 @@ async function runVotes(answerID) {
     const page = await browser.newPage();
     await page.goto(`https://poll.fm/${POLL_ID}/`);
     await page.evaluate(function () {
-      const ANSWER_CHOICE = 50502380; // CHANGE THIS TO YOUR ANSWER CHOICE
+      const ANSWER_CHOICE = 9999999; // CHANGE THIS TO YOUR ANSWER CHOICE
       const answerSelect = document.querySelector(`#PDI_answer${ANSWER_CHOICE}`);
       const voteButton = document.querySelector(".pds-vote-button");
       answerSelect.click();
