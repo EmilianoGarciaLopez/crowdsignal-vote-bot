@@ -10,18 +10,15 @@ async function runVotes() {
     const page = await browser.newPage();
     await page.goto(`https://poll.fm/POLL_ID/`);
     await page.evaluate(() => {
-      const answerSelect = document.querySelector(
-        "#PDI_answerANSWER_CHOICE"
-      );
-      const voteButton = document.querySelector(".pds-vote-button");
-      answerSelect.click();
-      voteButton.click();
+      document.querySelector("#PDI_answerANSWER_CHOICE").click();
+      document.querySelector(".pds-vote-button").click();
     });
     await page.close();
   }
 }
 
 function sleep(seconds) {
+  console.log(`Sleeping for ${seconds} seconds...`);
   const date = Date.now();
   let currentDate = null;
   do {
@@ -32,9 +29,5 @@ function sleep(seconds) {
 while (true) {
   console.log("Voting batch running");
   await runVotes();
-  let sleepNum = Math.floor(Math.random() * 20 + 10);
-  console.log("Sleeping for " + sleepNum + " seconds");
-  sleep(sleepNum);
+  sleep(Math.floor(Math.random() * 20 + 10));
 }
-
-//2154
