@@ -23,4 +23,4 @@ npm install
 npm start
 ```
 
-**Make sure to replace the ANSWER_CHOICE and VOTE_ID variables with the appropriate values**
+**Make sure to replace the ANSWER_CHOICE and VOTE_ID strings with the appropriate values** use find and replace to locate them
