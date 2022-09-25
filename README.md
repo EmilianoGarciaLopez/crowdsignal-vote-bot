@@ -1,7 +1,7 @@
-##Introduction
+## Introduction
 This is a simple repo that uses the puppeteer plugin to automate votes for vote.fm (aka polldaddy/crowdsignal) polls.
 
-##Run Instructions
+## Run Instructions
 Run the following commands to use the bot:
 
 you must have the tor package installed which prevents your ip from being blocked by poll.fm
